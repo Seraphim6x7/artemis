@@ -23,7 +23,7 @@ public class SystemManager {
 		bagged = new Bag<EntitySystem>();
 	}
 	
-	public EntitySystem setSystem(EntitySystem system) {
+	public <T extends EntitySystem> T setSystem(T system) {
 		system.setWorld(world);
 		
 		systems.put(system.getClass(), system);
